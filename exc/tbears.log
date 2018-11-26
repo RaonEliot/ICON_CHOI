@@ -1,0 +1,55 @@
+[ERROR|logger.py:360] 2018-11-26 06:40:52,806 > [IconService] 'ABCToken' object has no attribute 'choi sung hoon'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/iconservice/icon_inner_service.py", line 140, in _query
+    params=converted_request['params'])
+  File "/usr/local/lib/python3.6/dist-packages/iconservice/icon_service_engine.py", line 471, in query
+    ret = self._call(context, method, params)
+  File "/usr/local/lib/python3.6/dist-packages/iconservice/icon_service_engine.py", line 539, in _call
+    ret_val = handler(context, params)
+  File "/usr/local/lib/python3.6/dist-packages/iconservice/icon_service_engine.py", line 583, in _handle_icx_call
+    data)
+  File "/usr/local/lib/python3.6/dist-packages/iconservice/iconscore/icon_score_engine.py", line 97, in query
+    return self._call(context, icon_score_address, data)
+  File "/usr/local/lib/python3.6/dist-packages/iconservice/iconscore/icon_score_engine.py", line 129, in _call
+    if func_name is not None and is_func_readonly(func_name):
+  File "/usr/local/lib/python3.6/dist-packages/iconservice/iconscore/icon_score_base.py", line 414, in __is_func_readonly
+    func = getattr(self, func_name)
+AttributeError: 'ABCToken' object has no attribute 'choi sung hoon'
+[ERROR|logger.py:360] 2018-11-26 07:41:52,152 > [IconService] on_install() got an unexpected keyword argument 'tokenSocre'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/iconservice/icon_service_engine.py", line 616, in _handle_icx_send_transaction
+    tx_result.score_address = self._handle_score_invoke(context, to, params)
+  File "/usr/local/lib/python3.6/dist-packages/iconservice/icon_service_engine.py", line 788, in _handle_score_invoke
+    data=data)
+  File "/usr/local/lib/python3.6/dist-packages/iconservice/deploy/icon_score_deploy_engine.py", line 100, in invoke
+    raise e
+  File "/usr/local/lib/python3.6/dist-packages/iconservice/deploy/icon_score_deploy_engine.py", line 97, in invoke
+    self.deploy(context, context.tx.hash)
+  File "/usr/local/lib/python3.6/dist-packages/iconservice/deploy/icon_score_deploy_engine.py", line 130, in deploy
+    self._score_deploy(context, tx_params)
+  File "/usr/local/lib/python3.6/dist-packages/iconservice/deploy/icon_score_deploy_engine.py", line 156, in _score_deploy
+    self._on_deploy(context, tx_params)
+  File "/usr/local/lib/python3.6/dist-packages/iconservice/deploy/icon_score_deploy_engine.py", line 302, in _on_deploy
+    raise e
+  File "/usr/local/lib/python3.6/dist-packages/iconservice/deploy/icon_score_deploy_engine.py", line 298, in _on_deploy
+    self._initialize_score(on_deploy=on_deploy, params=params)
+  File "/usr/local/lib/python3.6/dist-packages/iconservice/deploy/icon_score_deploy_engine.py", line 321, in _initialize_score
+    on_deploy(**params)
+TypeError: on_install() got an unexpected keyword argument 'tokenSocre'
+[ERROR|logger.py:360] 2018-11-26 07:46:18,198 > [IconService] 'StandardCrowdSale' object has no attribute 'hello'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/iconservice/icon_inner_service.py", line 140, in _query
+    params=converted_request['params'])
+  File "/usr/local/lib/python3.6/dist-packages/iconservice/icon_service_engine.py", line 471, in query
+    ret = self._call(context, method, params)
+  File "/usr/local/lib/python3.6/dist-packages/iconservice/icon_service_engine.py", line 539, in _call
+    ret_val = handler(context, params)
+  File "/usr/local/lib/python3.6/dist-packages/iconservice/icon_service_engine.py", line 583, in _handle_icx_call
+    data)
+  File "/usr/local/lib/python3.6/dist-packages/iconservice/iconscore/icon_score_engine.py", line 97, in query
+    return self._call(context, icon_score_address, data)
+  File "/usr/local/lib/python3.6/dist-packages/iconservice/iconscore/icon_score_engine.py", line 129, in _call
+    if func_name is not None and is_func_readonly(func_name):
+  File "/usr/local/lib/python3.6/dist-packages/iconservice/iconscore/icon_score_base.py", line 414, in __is_func_readonly
+    func = getattr(self, func_name)
+AttributeError: 'StandardCrowdSale' object has no attribute 'hello'
